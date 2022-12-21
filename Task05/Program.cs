@@ -6,8 +6,10 @@
 
 Console.Write("Введите число ");
 int number = Convert.ToInt32(Console.ReadLine());
-
-
-
-
-Console.WriteLine("Hello, World!");
+int n = -number;
+while(n != number)
+{
+    Console.Write($"{n}, ");
+    n += 1;
+}
+Console.Write(number);
