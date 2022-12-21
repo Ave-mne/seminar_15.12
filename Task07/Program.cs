@@ -8,4 +8,11 @@
 Console.Write("Введите трехзначное число ");
 int number = Convert.ToInt32(Console.ReadLine());
 int lastFigure = number%10;
-Console.WriteLine($"Последняя цифра {lastFigure}");
+if(number >= 100 && number <= 999)
+{
+    Console.WriteLine($"Последняя цифра {lastFigure}");
+}
+else
+{
+    Console.WriteLine("Ошибка! Введено не трехзначное число");
+}
