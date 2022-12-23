@@ -4,7 +4,7 @@
 //5 -> Пятница
 
 Console.Write("Введите номер ");
-string number = Console.ReadLine();
+String number = Console.ReadLine();
 if(number == "1")
 {
     Console.WriteLine("Понедельник");
