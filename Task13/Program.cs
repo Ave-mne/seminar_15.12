@@ -8,18 +8,21 @@
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int numb = number;
-while(number > 1000)
+if(number > 99)
 {
-   number = number / 10;
+    while(number > 1000)
+    {
+         number = number / 10;
+    }
+    int thirdNumber = ThirdNumber(number);
+    Console.WriteLine($"Третья цифра числа {numb} => {thirdNumber}");
 }
 
-int thirdNumber = ThirdNumber(number);
-Console.WriteLine($"Третья цифра числа {numb} => {thirdNumber}");
-
-if(number < 100)
+else
 {
-    Console.WriteLine($"В числе {numb} нет третьей цифры ");
+     Console.WriteLine($"В числе {numb} нет третьей цифры ");
 }
+   
 
 int ThirdNumber(int num)
 {
