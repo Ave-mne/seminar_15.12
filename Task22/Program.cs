@@ -17,7 +17,7 @@ else Console.Write("Введено не натуральное число");
     int count = 1;
     while (count <= number)
     {
-        Console.WriteLine($"{count}\t" + Math.Pow(count, 2));
+        Console.WriteLine($"{count, 4}{Math.Pow(count, 2),4}"); // выравномание по правой стороне
         count++;
     }
 
