@@ -7,14 +7,11 @@
 
 Console.Write("Введите номер ");
 String number = Console.ReadLine();
-if(number == "6")
+if(number == "6" || number == "7")
 {
     Console.WriteLine("Да");
 }
-else if(number == "7")
-{
-    Console.WriteLine("Да");
-}
+
 else if(number == "1")
 {
     Console.WriteLine("Нет");
