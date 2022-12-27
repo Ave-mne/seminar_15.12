@@ -7,7 +7,12 @@
 
 Console.Write("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-
-int secondDijit = (number / 10) % 10;
-
-Console.WriteLine($" Результат из {number} => {secondDijit}");
+if (number > 99 && number <1000)
+{
+    int secondDigit = (number / 10) % 10;
+    Console.WriteLine($" Результат из {number} => {secondDigit}");
+}
+else
+{
+    Console.WriteLine("Неправильное число");
+}
