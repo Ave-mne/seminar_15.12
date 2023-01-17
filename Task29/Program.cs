@@ -5,17 +5,17 @@
 
 
 
-int[] array = CreateArray(8);
+int[] array = CreateArray(8, 0, 99);
 PrintArray(array);
 
 
-int[] CreateArray(int size)
+int[] CreateArray(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.Next(0, 99);
+        arr[i] = rnd.Next(min, max);
     }
     return arr;
 }
@@ -23,8 +23,11 @@ int[] CreateArray(int size)
 
 void PrintArray(int[] arr)
 {
+    Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write("'['arr[i] + "; "']'");
+        if (i < arr.Length - 1) Console.Write(arr[i] + ", ");
+        else Console.Write(arr[i]);
     }
+    Console.WriteLine("]");
 }
