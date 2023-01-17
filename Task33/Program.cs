@@ -3,6 +3,9 @@
 // 4; массив [6,7,189,345,3] -> нет
 // 3; массив [6,7,189,345,3] -> да
 
+Console.Write("Введите число ");
+int number = Convert.ToInt32(Console.ReadLine());
+
 int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] arr = new int[size];
@@ -24,5 +27,26 @@ void PrintArray(int[] arr)
     }
     Console.WriteLine("]");
 }
+
+bool  FindNumber(int [] arr, int num)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] == num) return true;     
+    }
+    return false;
+}
+
 int[] array = CreateArrayRndInt(4,-9,9);
-PrintArray(array);
+
+bool findNumber = FindNumber(array, number);
+if (findNumber == true)
+{
+    Console.WriteLine($"Число {number} присутствует в массиве ->");
+    PrintArray(array);
+}
+else
+{
+    Console.WriteLine($"Число {number} не присутствует в массиве ->");
+    PrintArray(array);
+}
