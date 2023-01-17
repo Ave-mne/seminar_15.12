@@ -8,13 +8,13 @@ Console.Write("Введите число ");
 int number = Convert.ToInt32(Console.ReadLine());
 int sumNumber = SumNumber(number);
 
-if (number < 10)
+if (number > 0)
 {
-    Console.WriteLine($"Сумма цифр равна {number}");
+    Console.WriteLine($"Сумма цифр числа {number} равна {sumNumber}");
 }
 else
 {
-    Console.WriteLine($"Сумма цифр в числе {number} равна {sumNumber}");
+    Console.WriteLine($"Число {number} не является натуральным!");
 }
 
 
