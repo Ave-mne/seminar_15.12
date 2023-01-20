@@ -14,7 +14,7 @@ double pointK2 = Convert.ToInt32(Console.ReadLine());
 
 double x = FindX(pointB1, pointK1, pointB2, pointK2);
 
-Console.WriteLine($"Точка пересечения двух прямых: [{pointK1 * x + pointB1}; {pointK2 * x + pointB2}]");
+Console.WriteLine($"Точка пересечения двух прямых: ({pointK1 * x + pointB1}; {pointK2 * x + pointB2})");
 
 double FindX(double b1, double k1, double b2, double k2)
 {
