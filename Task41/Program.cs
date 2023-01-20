@@ -4,19 +4,22 @@
 
 
 Console.Write("Уточните сколько чисел вы хотите ввести? ");
-int quant = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[quant];
-
-for (int i = 0; i < quant; i++) 
-{
-    Console.Write("Введите число: ");
-    array[i] = Convert.ToInt32(Console.ReadLine());
-}
-    
+int quantity = Convert.ToInt32(Console.ReadLine());
+int[] array = CreateArrayFromConsole(quantity);
 PrintArray(array);
 int positiveNumber = FindPositiveNumbers(array);
 Console.Write($"Колличество положительных чисел = {positiveNumber}");
 
+int[] CreateArrayFromConsole(int size)
+{
+    int [] arr = new int[size];
+    for (int i = 0; i < size; i++) 
+    {
+        Console.WriteLine("Введите число: ");
+        arr[i] = Convert.ToInt32(Console.ReadLine()) ;
+    }
+    return arr;
+}
 
 int FindPositiveNumbers(int[] arr)
 {
