@@ -7,13 +7,19 @@ Console.Write("Введите строку интересующего элеме
 int rowsI = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите столбец интересующего элемента ");
 int columnsJ = Convert.ToInt32(Console.ReadLine());
-int[,] array2d = CreateMatrixRndInt(5, 4, 1, 9);
-PrintMatrix(array2d);
-if(rowsI <= array2d.GetLength(0) && columnsJ <= array2d.GetLength(1))
+if (rowsI < 0 || columnsJ < 0) Console.WriteLine("Ошибка!!! Вводите только положительные числа!");
+else
 {
-    Console.WriteLine($"Интересующий Вас элемент -> {array2d[rowsI -1, columnsJ -1]}"); 
-} 
-else Console.WriteLine($"В массиве отсутствует элемент с позициями -> ({rowsI}, {columnsJ}) "); 
+    int[,] array2d = CreateMatrixRndInt(5, 4, 1, 9);
+    PrintMatrix(array2d);
+    if(rowsI <= array2d.GetLength(0) && columnsJ <= array2d.GetLength(1))
+    {
+        Console.WriteLine($"Интересующий Вас элемент -> {array2d[rowsI -1, columnsJ -1]}"); 
+    } 
+    else Console.WriteLine($"В массиве отсутствует элемент с позициями -> ({rowsI}, {columnsJ}) "); 
+
+}
+
 
 
 
