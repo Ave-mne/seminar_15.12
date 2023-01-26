@@ -1,10 +1,21 @@
 ﻿// Задайте двумерный массив из целых чисел.
 // Найдите среднее арифметическое элементов в каждом столбце.
 
-int[,] array2d = CreateMatrixRndInt(5, 4, 1, 9);
-PrintMatrix(array2d);
+int[,] array = CreateMatrixRndInt(3, 4, 1, 9);
+PrintMatrix(array);
+Console.WriteLine("------------------------");
 
-double
+for (int j = 0; j < array.GetLength(1); j++)
+{
+    double avarage = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        avarage = avarage + array[i, j];
+    }
+    avarage = avarage / array.GetLength(0);
+    Console.Write(Math.Round(avarage, 1) + " ; ");
+}
+
 
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
